@@ -31,6 +31,11 @@ preferences
     	input "protects", "device.nestProtect", title: "Protects", multiple: true, required: false
     	input "thermostats", "device.nestthermostat", title: "Thermostats", multiple: true, required: false
 	}
+    
+    section("Refresh Duration")
+    {
+    	input "refreshMins", "number", title: "Minutes (default 60)", required: false
+    }
 }
 
 def installed() {
@@ -50,7 +55,7 @@ def updated() {
 
 def initialize() 
 {
-	state.RefreshDuration = 60 * 60
+	state.RefreshDuration = (refreshMins ?: 60) * 60
     
     scheduleUpdate(state.RefreshDuration)
 }
