@@ -79,7 +79,7 @@ preferences
 metadata 
 {
 	// Automatically generated. Make future change here.
-	definition (name: "Nest Protect", author: "adam.heinmiller@me.com") {
+	definition (name: "Nest Protect", author: "nick@nickhbailey.com") {
 		capability "Battery"
 		capability "Carbon Monoxide Detector"
 		capability "Smoke Detector"
