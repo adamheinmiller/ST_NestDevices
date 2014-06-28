@@ -64,7 +64,7 @@ preferences {
  // for the UI
 metadata {
 	// Automatically generated. Make future change here.
-	definition (name: "Nest Thermostat", author: "adam.heinmiller@me.com") 
+	definition (name: "NestThermostat", author: "Dianoga") 
     {
 		capability "Relative Humidity Measurement"
 		capability "Thermostat"
@@ -134,11 +134,7 @@ metadata {
         details(["temperature", "thermostatMode", "thermostatFanMode", "coolSliderControl", "coolingSetpoint", "humidity", "presence", "refresh"])
     }
 }
- 
-// parse events into attributes
-def parse(String description) {
-    
-}
+
  
 // handle commands
 def setHeatingSetpoint(temp) {
